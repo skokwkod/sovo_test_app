@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "834773952930",
+    "firebase_url": "https://sovo-test-project-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "sovo-test-project",
+    "storage_bucket": "sovo-test-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834773952930:android:37027e32b3a6ad3172eafb",
+        "android_client_info": {
+          "package_name": "com.example.sovo_test_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834773952930-0lud3iql8rjv7ooqop0h4t0ugctbpkoo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsGIVt0UuPx-Eno8cHp0Bix3q4e8kD7wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834773952930-0lud3iql8rjv7ooqop0h4t0ugctbpkoo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "834773952930-k66ke8s1nolfskr88f8mnhqs26l2hp4m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sovoTestApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
