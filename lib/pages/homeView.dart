@@ -172,7 +172,7 @@ class _HomeViewState extends State<HomeView> {
     });
   }
   void _updateToDoItem(String item){
-    show
+
   }
 
   void _getPoints(String? uid) async {
