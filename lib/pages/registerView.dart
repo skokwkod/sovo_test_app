@@ -61,7 +61,7 @@ class RegisterView extends StatelessWidget {
                         (User? user) {
                           if (user != null) {
                             final userPoints = <String, dynamic>{
-                              "uid": user?.uid,
+                              "uid": user.uid,
                               "points": "3",
                             };
                             var db = FirebaseFirestore.instance;
@@ -72,7 +72,7 @@ class RegisterView extends StatelessWidget {
                                 MaterialPageRoute(
                                     builder: (context) => const MyHomePage()));
                           }
-                          ;
+
                         },
                       );
                     } on FirebaseAuthException catch (e) {

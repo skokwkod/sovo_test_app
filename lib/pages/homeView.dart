@@ -26,7 +26,6 @@ class _HomeViewState extends State<HomeView> {
   final List<String> _todoList = <String>[];
   final TextEditingController _textFieldController = TextEditingController();
 
-  // late AdmobReward rewardAd;
 
   int userPoints = 0;
 
@@ -122,7 +121,8 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(title),
-          IconButton(onPressed: () => _deleteToDoItem(title), icon: Icon(Icons.delete))
+          IconButton(
+              onPressed: () => _deleteToDoItem(title), icon: Icon(Icons.delete))
         ],
       ),
       tileColor: Colors.redAccent,
@@ -166,13 +166,10 @@ class _HomeViewState extends State<HomeView> {
     _textFieldController.clear();
   }
 
-  void _deleteToDoItem(String item){
+  void _deleteToDoItem(String title) {
     setState(() {
-      _todoList.remove(item);
+      _todoList.remove(title);
     });
-  }
-  void _updateToDoItem(String item){
-
   }
 
   void _getPoints(String? uid) async {
@@ -191,8 +188,6 @@ class _HomeViewState extends State<HomeView> {
   }
 
   Widget _getFloatingActionButton() {
-    print(userPoints);
-    print(auth.currentUser?.uid.toString());
     if (userPoints > 0) {
       return FloatingActionButton.extended(
         onPressed: () => _displayDialog(context),
@@ -218,12 +213,10 @@ class _HomeViewState extends State<HomeView> {
           onAdLoaded: (ad) => setState(() => _rewardedAd = ad),
           onAdFailedToLoad: (error) => setState(() => _rewardedAd = null),
         ));
-    print (_rewardedAd);
+    print(_rewardedAd);
   }
 
   void _showRewardedAd() {
-    print("showRewarded");
-    print(_rewardedAd);
     if (_rewardedAd != null) {
       _rewardedAd!.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (ad) {
@@ -245,6 +238,7 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   void initState() {
+    super.initState();
     _getPoints(auth.currentUser?.uid.toString());
     _createRewardedAdd();
   }
